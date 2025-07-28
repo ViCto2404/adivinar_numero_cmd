@@ -1,0 +1,35 @@
+1. Funcionalidad Principal
+El programa debe generar un número entero aleatorio dentro de un rango predefinido. Inicialmente, este rango será entre 1 y 100 (inclusive).
+El usuario tendrá un número limitado de intentos para adivinar el número secreto. Puedes establecer un número razonable de intentos, por ejemplo, 10.
+En cada intento, el programa debe solicitar al usuario que introduzca su suposición.
+Después de cada suposición, el programa debe proporcionar pistas al usuario:
+Si la suposición es incorrecta, debe indicar si el número secreto es mayor o menor que la suposición.
+Si la suposición es correcta, el programa debe felicitar al usuario y terminar el juego.
+Si el usuario agota todos sus intentos sin adivinar el número, el programa debe informarle que perdió y revelar cuál era el número secreto.
+2. Interfaz de Usuario (Consola)
+Al iniciar el juego, el programa debe mostrar un mensaje de bienvenida explicando las reglas básicas (rango de números, número de intentos).
+Después de cada intento, el programa debe indicar cuántos intentos le quedan al usuario.
+Los mensajes deben ser claros y fáciles de entender.
+3. Consideraciones Técnicas
+Variables: Utiliza variables para almacenar el número secreto, el número de intentos restantes, y la suposición del usuario.
+Loops (Bucles): Emplea un bucle (por ejemplo, while) para controlar los múltiples intentos del usuario. El bucle debe continuar mientras el usuario tenga intentos disponibles y no haya adivinado el número.
+Condicionales (if/elif/else): Utiliza sentencias condicionales para:
+Comparar la suposición del usuario con el número secreto.
+Determinar si la suposición es mayor, menor o igual.
+Manejar los diferentes resultados (adivinó, incorrecto, perdió).
+Generación de número aleatorio: Deberás usar el módulo random de Python para generar el número aleatorio. Específicamente, la función random.randint() es ideal para esto. Si aún no has visto cómo usarla, investiga su funcionamiento.
+Funciones (Opcional, pero recomendado): Si ya has aprendido sobre funciones, puedes:
+Crear una función para generar el número aleatorio.
+Crear una función principal que encapsule la lógica del juego. Esto ayudará a organizar tu código y hacerlo más legible.
+4. Flujo del Juego (Ejemplo)
+El programa genera un número aleatorio (ej. 42).
+Muestra el mensaje de bienvenida y las reglas.
+Pide al usuario que adivine el número (intento 1 de 10).
+Usuario introduce 50.
+Programa dice: "El número secreto es menor. Te quedan 9 intentos."
+Pide al usuario que adivine el número (intento 2 de 10).
+Usuario introduce 25.
+Programa dice: "El número secreto es mayor. Te quedan 8 intentos."
+... (continúa hasta que el usuario adivine o se quede sin intentos)
+Si el usuario adivina: "¡Felicidades! Adivinaste el número 42 en X intentos."
+Si se agotan los intentos: "¡Se acabaron tus intentos! El número secreto era 42."
